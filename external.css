@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(179, 197, 229);
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 400%;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: aliceblue;
+}   
+th, td{
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+} 
+th {
+    background-color: white;
+    color: white;
+}
+h2 {
+    align-content: above;
+    font-style: italic;
+}
+p{
+    text-align: justify;
+}

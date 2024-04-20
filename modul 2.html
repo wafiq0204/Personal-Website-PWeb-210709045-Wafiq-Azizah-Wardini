@@ -1,0 +1,114 @@
+<html lang="indonesia">
+<head>
+	<title>MODUL 2</title>
+	<link rel="stylesheet" href="external.css" />
+</head>
+
+<body>
+	<h3>Formulir Anggota Perpustakaan Program Studi Perpustakaan dan Sains Informasi</h3>
+
+<form action="" method="POST"></form>
+<table>
+    <tr>
+         <td>Nama</td>
+         <td><input type="text"></td>
+    </tr>
+
+    <tr>
+        <td>NIM</td>
+        <td><input type="number"></td>
+    </tr>
+
+    <tr>
+        <td>Alamat</td>
+        <td><textarea></textarea></td>
+    </tr>
+
+    <tr>
+        <td>Jenis Kelamin</td>
+        <td><input type="radio" name="jk"> Pria
+            <input type="radio" name="jk"> Wanita
+        </td>
+    </tr>
+
+    <tr>
+        <td>Email</td>
+        <td><input type="text"></td>
+    </tr>
+
+    <tr>
+        <td>No. HP</td>
+        <td><input type="number"></td>
+    </tr>
+
+    <tr>
+        <td>Tempat Lahir</td>
+        <td><input type="text"></td>
+    </tr>
+
+    <tr>
+        <td>Tanggal  Lahir</td>
+        <td><input type="text"></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td><input type="submit" value="simpan">
+            <input type="reset" value="reset">
+            <input type="button" value="kembali">
+        </td>
+    </tr>
+</table>
+<div>
+	<br><div id="book collection">
+		<h3>Koleksi</h3>
+<table border="1">
+	<tr>
+		<th>Judul Buku</th>
+		<th>Penulis</th>
+		<th>Tahun Terbit</th>
+		<th>No. Panggil</th>
+	</tr>
+	<tr>
+		<td>Hukum perkawinan indonesia</td>
+		<td>Refika Aditama</td>
+		<td>2016</td>
+		<td>364.016 Isn h</td>
+	</tr>
+	<tr>
+		<td>233 tanya jawab seputar hukum bisnis</td>
+		<td>Pustaka Utami Grafiti</td>
+		<td>2011</td>
+		<td>346.07 Pra d</td>
+	</tr>
+</table>
+</div></br>
+<br><div class="form" id="form-pemesanan">
+	<h3>Reservation</h3>
+	<form action="proses_pemesanan.php" method="POST">
+		<label for="judul">Judul Buku:</label><br>
+		<input type="text" id="judul" name="judul"><br>
+		<label for="judul">Nama:</label><br>
+		<input type="text" id="nama" name="nama"><br>
+		<label for="NIM">NIM:</label><br>
+		<textarea id="NIM" name="NIM"></textarea><br>
+		<input type="submit" value="Simpan">
+		<input type="reset" value="Reset">
+	</form>
+</div></br>
+<br><div id="form-perpanjangan">
+	<h3>Perpanjangan Peminjaman</h3>
+	<form action="proses_perpanjangan.php" method="POST">
+		<label for="kode_buku">Kode Buku:</label><br>
+		<input type="text" id="kode_buku" name="kode_buku"><br>
+		<label for="nama">Nama Peminjam:</label><br>
+		<input type="text" id="nama" name="nama"><br>
+		<label for="NIM">NIM:</label><br>
+		<input type="NIM" id="NIM" name="NIM"><br>
+		<input type="submit" value="Simpan">
+		<input type="reset" value="Reset">
+	</form>
+</div></br>
+</body>
+
+</html>
