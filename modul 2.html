@@ -32,64 +32,67 @@
 		</div>
 		<!-- NAVIGATION BAR SELESAI -->
 	
-	<h3>Formulir Anggota Perpustakaan Program Studi Perpustakaan dan Sains Informasi</h3>
+<br><h3>Formulir Anggota Perpustakaan Program Studi Perpustakaan dan Sains Informasi</h3></br>
 
 <form action="" method="POST"></form>
-<table>
-    <tr>
-         <td>Nama</td>
-         <td><input type="text"></td>
+<table class="tabel">
+    <tr class="tr">
+         <td class="td">Nama</td>
+         <td class="td"><input type="text"></td>
     </tr>
 
-    <tr>
-        <td>NIM</td>
-        <td><input type="number"></td>
+    <tr class="tr">
+        <td class="td">NIM</td>
+        <td class="td"><input type="number"></td>
     </tr>
 
-    <tr>
-        <td>Alamat</td>
-        <td><textarea></textarea></td>
+    <tr class="tr">
+        <td class="td">Alamat</td>
+        <td class="td"><textarea></textarea></td>
     </tr>
 
-    <tr>
-        <td>Jenis Kelamin</td>
-        <td><input type="radio" name="jk"> Pria
+    <tr class="tr">
+        <td class="td">Jenis Kelamin</td>
+        <td class="td"><input type="radio" name="jk"> Pria
             <input type="radio" name="jk"> Wanita
         </td>
     </tr>
 
-    <tr>
-        <td>Email</td>
-        <td><input type="text"></td>
+    <tr class="tr">
+        <td class="td">Email</td>
+        <td class="td"><input type="text"></td>
     </tr>
 
-    <tr>
+    <tr class="tr">
         <td>No. HP</td>
         <td><input type="number"></td>
     </tr>
 
-    <tr>
-        <td>Tempat Lahir</td>
-        <td><input type="text"></td>
+    <tr class="tr">
+        <td class="td">Tempat Lahir</td>
+        <td class="td"><input type="text"></td>
     </tr>
 
-    <tr>
-        <td>Tanggal  Lahir</td>
-        <td><input type="text"></td>
+    <tr class="tr">
+        <td class="td">Tanggal  Lahir</td>
+        <td class="td"><input type="text"></td>
     </tr>
 
-    <tr>
-        <td></td>
-        <td><input type="submit" value="simpan">
+    <tr class="tr">
+        <td class="td"></td>
+        <td class="td"><input type="submit" value="simpan">
             <input type="reset" value="reset">
             <input type="button" value="kembali">
         </td>
     </tr>
 </table>
 <div>
-	<br><div id="book collection">
-		<h3>Koleksi</h3>
-<table border="1">
+
+<br><div id="book collection">
+
+<h3>Koleksi</h3>
+
+<table class="tabel-koleksi" border="1">
 	<tr>
 		<th>Judul Buku</th>
 		<th>Penulis</th>
@@ -109,9 +112,10 @@
 		<td>346.07 Pra d</td>
 	</tr>
 </table>
-</div></br>
-<br><div class="form" id="form-pemesanan">
-	<h3>Reservation</h3>
+</div>
+
+<br><h3>Reservation</h3></div>
+	<div class="form-pemesanan" id="form-pemesanan">
 	<form action="proses_pemesanan.php" method="POST">
 		<label for="judul">Judul Buku:</label><br>
 		<input type="text" id="judul" name="judul"><br>
@@ -122,11 +126,12 @@
 		<input type="submit" value="Simpan">
 		<input type="reset" value="Reset">
 	</form>
-</div></br>
-<br><div id="form-perpanjangan">
-	<h3>Perpanjangan Peminjaman</h3>
+</div>
+
+<br><h3>Perpanjangan Peminjaman</h3></div>
+	<div class="form-perpanjangan" id="form-perpanjangan">
 	<form action="proses_perpanjangan.php" method="POST">
-		<label for="kode_buku">Kode Buku:</label><br>
+		<label for="kode_buku">Nomor Panggil:</label><br>
 		<input type="text" id="kode_buku" name="kode_buku"><br>
 		<label for="nama">Nama Peminjam:</label><br>
 		<input type="text" id="nama" name="nama"><br>
@@ -135,7 +140,7 @@
 		<input type="submit" value="Simpan">
 		<input type="reset" value="Reset">
 	</form>
-</div></br>
+</div>
 </body>
 
 </html>
