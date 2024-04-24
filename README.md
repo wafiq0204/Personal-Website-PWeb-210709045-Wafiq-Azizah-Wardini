@@ -94,7 +94,7 @@
 		<!-- CONTENT 1 -->
 		<div class="container-content">
 			<br><a href="https://wafiq0204.github.io/Personal-Website-PWeb-210709045-Wafiq-Azizah-Wardini/" class="a-content">
-				<img src="perpustakaan nasional.jpg" class="img-content" />
+				<img src="a616203623dafaf053e5a8a05f455fee.jpg" class="img-content" />
 				<p style="color: #008000;"></p>
 			</a></br>
 
@@ -104,6 +104,7 @@
 		<!-- FOOTER -->
 		<div class="container-footer">
 			<h1 class="h1-footer"></h1>
+   			<p style="color: #0000000">Copyright © Wafiq Azizah Wardini - 210709045</p>
 		</div>
 		<!-- FOOTER END -->
 	</div>
