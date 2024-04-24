@@ -71,7 +71,7 @@
 		<div class="container-navbar">
 			<ul class="ul-navbar">
 				<li class="li-navbar">
-					<a href="#" class="a-navbar">HOME</a>
+					<a href="https://wafiq0204.github.io/Personal-Website-PWeb-210709045-Wafiq-Azizah-Wardini/" class="a-navbar">HOME</a>
 				</li>
 				<li class="li-navbar">
 					<a href="about.html" class="a-navbar">ABOUT</a>
