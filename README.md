@@ -92,7 +92,7 @@
 		<!-- NAVIGATION BAR SELESAI -->
 		<!-- CONTENT 1 -->
 		<div class="container-content">
-			<br><a href="https://wafiq0204.github.io/Personal-Website-PWeb-210709045-Wafiq-Azizah-Wardini/" class="a-content">
+			<br><a href="https://wafiq0204.github.io/SamsLib/" class="a-content">
 				<img src="a616203623dafaf053e5a8a05f455fee.jpg" class="img-content" />
 				<p style="color: #008000;"></p>
 			</a>
