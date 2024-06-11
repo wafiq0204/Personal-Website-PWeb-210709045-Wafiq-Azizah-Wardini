@@ -81,12 +81,6 @@
 				<li class="li-navbar">
 					<a href="modul 1.html" class="a-navbar">MODUL 1</a>
 				</li>
-				 <li class="Dropdown">
-                    			<a href="#" class="dropbtn">Services</a>
-                   				<div class="dropdown-content">
-                       					<a href="#">Web Design</a>
-                        				<a href="#">SEO</a>
-                        				<a href="#">Marketing</a>
 							
 				<li class="li-navbar">
 					<a href="modul 2.html" class="a-navbar">MODUL 2</a>
