@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh JavaScript dalam HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Contoh JavaScript dalam HTML</h1>
+
+<button onclick="runExample()">Jalankan Contoh</button>
+
+<div id="output"></div>
+
+<script>
+function runExample() {
+    // Variabel
+    let output = document.getElementById('output');
+    let result = '';
+    
+    // Operator
+    let a = 5;
+    let b = 10;
+    let sum = a + b;
+    result += `Hasil penjumlahan ${a} + ${b} adalah ${sum}<br>`;
+
+    // Struktur Kondisi
+    if (sum > 10) {
+        result += 'Hasil penjumlahan lebih besar dari 10<br>';
+    } else {
+        result += 'Hasil penjumlahan kurang dari atau sama dengan 10<br>';
+    }
+
+    // Struktur Perulangan
+    result += 'Perulangan angka dari 1 sampai 5:<br>';
+    for (let i = 1; i <= 5; i++) {
+        result += `${i} `;
+    }
+    
+    // Menampilkan hasil pada elemen output
+    output.innerHTML = result;
+}
+</script>
+
+</body>
+</html>

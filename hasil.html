@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Perhitungan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+        }
+        .result {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Hasil Perhitungan</h1>
+
+<div class="result" id="result">
+    <!-- Hasil akan ditampilkan di sini -->
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const num1 = parseFloat(urlParams.get('num1'));
+    const num2 = parseFloat(urlParams.get('num2'));
+    const operation = urlParams.get('operation');
+    let result;
+
+    if (isNaN(num1) || isNaN(num2)) {
+        result = 'Mohon masukkan bilangan yang valid.';
+    } else {
+        switch (operation) {
+            case 'add':
+                result = num1 + num2;
+                break;
+            case 'subtract':
+                result = num1 - num2;
+                break;
+            case 'multiply':
+                result = num1 * num2;
+                break;
+            case 'divide':
+                result = num2 !== 0 ? num1 / num2 : 'Tidak dapat membagi dengan nol';
+                break;
+            default:
+                result = 'Operasi tidak valid.';
+        }
+    }
+
+    document.getElementById('result').textContent = 'Hasil: ' + result;
+});
+</script>
+
+</body>
+</html>

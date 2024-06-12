@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Pustaka</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="number"] {
+            padding: 6px;
+            width: 200px;
+        }
+        input[type="submit"] {
+            padding: 6px 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Daftar Pustaka</h2>
+
+<!-- Form untuk menambah data -->
+<form action="add_book.php" method="post">
+    <input type="text" name="title" placeholder="Judul" required>
+    <input type="text" name="author" placeholder="Penulis" required>
+    <input type="number" name="year" placeholder="Tahun" required>
+    <input type="submit" value="Tambah">
+</form>
+
+<!-- Tabel untuk menampilkan data -->
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Judul</th>
+        <th>Penulis</th>
+        <th>Tahun</th>
+        <th>Aksi</th>
+    </tr>
+    <!-- Data pustaka akan ditampilkan di sini -->
+</table>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        #bookList {
+            margin-top: 20px;
+            width: 100%;
+        }
+        .add-book-form {
+            margin-top: 20px;
+        }
+        .add-book-form input, .add-book-form button {
+            padding: 10px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Perpustakaan</h1>
+
+<table id="bookList" class="display">
+    <thead>
+        <tr>
+            <th>Judul</th>
+            <th>Pengarang</th>
+            <th>Tahun</th>
+            <th>Aksi</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Daftar buku akan ditambahkan di sini -->
+    </tbody>
+</table>
+
+<div class="add-book-form">
+    <h2>Tambah Buku Baru</h2>
+    <input type="text" id="title" placeholder="Judul Buku" required>
+    <input type="text" id="author" placeholder="Pengarang Buku" required>
+    <input type="number" id="year" placeholder="Tahun Terbit" required>
+    <button id="addBookBtn">Tambah Buku</button>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script>
+$(document).ready(function() {
+    // Data buku awal
+    let books = [
+        { title: 'Sang Pemimpi', author: 'Andrea Hirata', year: 2006 },
+        { title: 'Laskar Pelangi', author: 'Andrea Hirata', year: 2005 }
+    ];
+
+    // Inisialisasi DataTable
+    let table = $('#bookList').DataTable();
+
+    // Fungsi untuk menampilkan daftar buku
+    function displayBooks() {
+        table.clear();
+        books.forEach((book, index) => {
+            table.row.add([
+                book.title,
+                book.author,
+                book.year,
+                `<button class="deleteBookBtn" data-index="${index}"><i class="fas fa-trash"></i> Hapus</button>`
+            ]).draw(false);
+        });
+    }
+
+    // Menampilkan buku awal
+    displayBooks();
+
+    // Event untuk menambahkan buku baru
+    $('#addBookBtn').click(function() {
+        let title = $('#title').val();
+        let author = $('#author').val();
+        let year = $('#year').val();
+
+        if (title && author && year) {
+            books.push({ title, author, year });
+            displayBooks();
+            $('#title').val('');
+            $('#author').val('');
+            $('#year').val('');
+        } else {
+            alert('Mohon isi semua kolom');
+        }
+    });
+
+    // Event untuk menghapus buku
+    $(document).on('click', '.deleteBookBtn', function() {
+        let index = $(this).data('index');
+        books.splice(index, 1);
+        displayBooks();
+    });
+});
+</script>
+
+</body>
+</html>

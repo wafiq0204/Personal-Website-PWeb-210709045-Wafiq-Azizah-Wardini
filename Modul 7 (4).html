@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+            text-align: center;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #218838;
+        }
+        .message {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+        .success {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+        }
+        .error {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
+        }
+        .incomplete {
+            background-color: #fff3cd;
+            border-color: #ffeeba;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h1>Login</h1>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button id="loginBtn">Login</button>
+    <div id="message" class="message"></div>
+</div>
+
+<script>
+document.getElementById('loginBtn').addEventListener('click', function() {
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const messageDiv = document.getElementById('message');
+
+    if (!username || !password) {
+        messageDiv.textContent = 'Input tidak lengkap. Mohon masukkan username dan password.';
+        messageDiv.className = 'message incomplete';
+        messageDiv.style.display = 'block';
+    } else {
+        // Gantikan dengan validasi login yang benar
+        const validUsername = 'user';
+        const validPassword = 'password';
+
+        if (username === validUsername && password === validPassword) {
+            messageDiv.textContent = 'Login sukses. Selamat datang!';
+            messageDiv.className = 'message success';
+            messageDiv.style.display = 'block';
+        } else {
+            messageDiv.textContent = 'Login gagal. Username atau password salah.';
+            messageDiv.className = 'message error';
+            messageDiv.style.display = 'block';
+        }
+    }
+});
+</script>
+
+</body>
+</html>

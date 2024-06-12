@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pameran Buku</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        #info {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Selamat Datang di Pameran Buku</h1>
+<p>Klik tombol di bawah untuk melihat informasi tentang pameran buku.</p>
+<button id="showInfoBtn">Tampilkan Informasi</button>
+
+<div id="info">
+    <h2>Informasi Pameran Buku</h2>
+    <p>
+        Acara: Pameran Buku Tahunan<br>
+        Tanggal: 10 - 13 Juni 2024<br>
+        Tempat: XXXXX<br>
+        Waktu: 10:00 - 18:00 WIB<br>
+    </p>
+    <p>
+        Datang dan temukan berbagai buku menarik dengan diskon khusus. Acara ini juga diisi dengan berbagai seminar dan diskusi bersama penulis terkenal. Jangan lewatkan kesempatan ini!
+    </p>
+</div>
+
+<script>
+document.getElementById('showInfoBtn').addEventListener('click', function() {
+    let infoDiv = document.getElementById('info');
+    if (infoDiv.style.display === 'none') {
+        infoDiv.style.display = 'block';
+        this.textContent = 'Sembunyikan Informasi';
+    } else {
+        infoDiv.style.display = 'none';
+        this.textContent = 'Tampilkan Informasi';
+    }
+});
+</script>
+
+</body>
+</html>
