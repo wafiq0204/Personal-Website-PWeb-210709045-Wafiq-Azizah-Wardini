@@ -57,7 +57,7 @@
 			padding: 20px ;
 			margin: 5px;
 			color: black;
-			font-size: 15px;
+			font-size: 10px;
 		}
 
 	</style>
